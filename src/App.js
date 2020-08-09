@@ -1,13 +1,24 @@
-import React from 'react';
+import React from 'react'
 import Header from 'components/Header'
-import './App.css';
+import AddTransaction from 'components/AddTransaction'
+import TransactionList from 'components/TransactionList'
+import Balance from 'components/Balance'
+import IncomeExpenses from 'components/IncomeExpenses'
+import { GlobalProvider } from 'context/GlobalState'
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
+    <GlobalProvider>
       <Header />
-    </div>
+      <div className="container">
+        <Balance />
+        <IncomeExpenses />
+        <TransactionList />
+        <AddTransaction />
+      </div>
+    </GlobalProvider>
   );
 }
 
-export default App;
+export default App
