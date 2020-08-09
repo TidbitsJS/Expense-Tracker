@@ -9,8 +9,8 @@ const TransactionList = () => {
         <>
           <h3>History</h3>
           <ul id="list" className="list">
-              {transactions.map(transaction => (
-                <Transaction key={transaction.id} transaction={transaction} />
+              {transactions.map((transaction,index) => (
+                <Transaction key={transaction.id} transaction={transaction} index={index}/>
               ))}
           </ul>
         </>

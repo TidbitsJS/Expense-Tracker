@@ -3,6 +3,7 @@ export default (state,action) => {
         case 'DELETE_TRANSACTION':
             let newTransactions = JSON.parse(JSON.stringify(state.transactions))
             newTransactions.splice(action.payload, 1)
+            console.log("delete",action.payload,newTransactions, state.transactions);
             window.localStorage.setItem('transactions', JSON.stringify(newTransactions))
             return {
                 ...state,
