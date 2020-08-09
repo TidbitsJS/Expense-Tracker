@@ -21,7 +21,7 @@ body {
 
 .container {
   margin: 30px auto;
-  width: 350px;
+  width: 450px;
 }
 
 h1 {
@@ -35,9 +35,35 @@ h3 {
   margin: 40px 0 10px;
 }
 
+.shows {
+  cursor: pointer;
+}
+
+.balance {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
 h4 {
   margin: 0;
   text-transform: uppercase;
+  font-size: 21px;
+  letter-spacing: 2px;
+}
+
+.fa-history {
+  margin-left: 0.5rem;
+  color: mediumblue;
+}
+
+.fa-plus-circle {
+  margin-left: 0.5rem;
+  color: blueviolet;
 }
 
 .inc-exp-container {
@@ -74,7 +100,7 @@ h4 {
 
 label {
   display: inline-block;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 input[type='text'],
@@ -148,4 +174,29 @@ input[type='number'] {
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: 350px;
+  }
+
+  h4,h1 {
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: 250px;
+  }
+
+  h4,h1 {
+    font-size: 17px;
+  }
+
+  .money {
+    font-size: 17px;
+  }
 }
